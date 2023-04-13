@@ -1,0 +1,11 @@
+apiVersion: v1
+metadata:
+  name: goserver-Service
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      name: http-svc
+      port: 3000
+  selector:
+    app: server
